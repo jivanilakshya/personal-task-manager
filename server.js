@@ -17,12 +17,6 @@ app.get("/users/:id", (req, res) => {
   res.json(user);
 });
 
-app.get("/users/:category", (req, res) => {
-  const user = users.find(u => u.category === req.params.category);
-  if (!user) return res.status(404).json({ message: "User not found" });{}
-  res.json(user);
-});
-
 app.post("/users", (req, res) => {
   
   const body = req.body;
